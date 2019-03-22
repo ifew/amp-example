@@ -1,0 +1,5 @@
+﻿# THIS USE FOR LOCALHOST
+
+# docker build -t amp-php-example -f Dockerfile_php . 
+# docker run -d --name amp-php-example -p 9001:80 -v $PWD:/var/www/html amp-php-example
+FROM richarvey/nginx-php-fpm
