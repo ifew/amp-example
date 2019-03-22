@@ -21,7 +21,7 @@
     <script type="text/javascript">
     window.onload = function html(){
         document.getElementById("jshtml-change-local").innerHTML = "Hi, This change from jQuery (Local page)";
-        window.parent.document.getElementById("jshtml-change-parent").innerHTML = "Hi, This change from jQuery (Parent page)";
+        window.parent.postMessage('Hi, This change from jQuery (Parent page)', '*');
     }
     </script>
     <style amp-boilerplate>
