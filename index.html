@@ -18,11 +18,6 @@
         ]
       }
     </script>
-    <script>
-        window.addEventListener('message',function(event) {
-            window.parent.document.getElementById("jshtml-change-parent").innerHTML = event.data;
-        },false);
-    </script>
     <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
     <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
@@ -166,16 +161,15 @@
             sandbox="allow-scripts allow-same-origin">
         </amp-iframe>
 
-        <h2>amp-iframe: call Local javascript (jQuery), change text in this document</h2>
+        <h2>amp-iframe: call Local javascript, modal alert</h2>
         <p>must use //cdn.localhost:9001/ (exclude http:)</p>    
-        <amp-iframe src="//cdn.localhost:9001/js_change_parent.html"
+        <amp-iframe src="//cdn.localhost:9001/js_modal.html"
             title="local javascript"
             height="360"
             layout="fixed-height"
             frameborder="0"
-            sandbox="allow-scripts allow-same-origin">
+            sandbox="allow-scripts allow-same-origin allow-modals">
         </amp-iframe>
-        <div id="jshtml-change-parent">Hello World</div>
 </body>
 
 </html>
