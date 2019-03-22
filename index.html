@@ -1,0 +1,177 @@
+<!doctype html>
+<html amp lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Hello, AMPs</title>
+    <link rel="canonical" href="http://example.ampproject.org/article-metadata.html">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Open-source framework for publishing content",
+        "datePublished": "2015-10-07T12:02:41Z",
+        "image": [
+          "logo.jpg"
+        ]
+      }
+    </script>
+    <script async custom-element="amp-social-share"
+        src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
+
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+    </style><noscript>
+        <style amp-boilerplate>
+            body {
+                -webkit-animation: none;
+                -moz-animation: none;
+                -ms-animation: none;
+                animation: none
+            }
+        </style>
+    </noscript>
+</head>
+
+<body>
+    <h1>Welcome to the mobile web</h1>
+    <h2>amp-carousel: with Local image and other domain </h2>
+    <amp-carousel width="1280" height="857" layout="responsive" type="slides">
+        <figure class="figure">
+            <amp-img src="/img/landscape_lake_1280x857.jpg" width="1280" height="857" layout="responsive"></amp-img>
+            <figcaption>Each image has a different caption.</figcaption>
+        </figure>
+        <figure class="figure">
+            <amp-img src="/img/landscape_village_1280x853.jpg" width="1280" height="853" layout="responsive"></amp-img>
+            <figcaption>This caption is different.</figcaption>
+        </figure>
+        <figure class="figure">
+            <amp-img src="https://cdn-images-1.medium.com/max/2400/1*fXlnuk6UYWDcZqsxwFhQWg.png" width="1280" height="853" layout="responsive"></amp-img>
+            <figcaption>Image from Medium</figcaption>
+        </figure>
+    </amp-carousel>
+
+    <h2>amp-social-share </h2>
+    <p class="heading">
+        <amp-social-share type="twitter" width="45" height="33"></amp-social-share>
+        <amp-social-share type="facebook" width="45" height="33" data-attribution="254325784911610"></amp-social-share>
+        <amp-social-share type="gplus" width="45" height="33"></amp-social-share>
+        <amp-social-share type="email" width="45" height="33"></amp-social-share>
+        <amp-social-share type="pinterest" width="45" height="33"></amp-social-share>
+    </p>
+
+    <h2>amp-iframe: call from Google Trend </h2>
+    <figure class="figure">
+        <amp-iframe src="https://trends.google.com/trends/embed/US_cu_82I1CVMBAACV6M_en/horserace_chart_3c6cdb21-e1eb-4412-9c28-707c3638ea35?hl=en&template=fe"
+          title="from medium"
+          height="360"
+          layout="fixed-height"
+          frameborder="0"
+          sandbox="allow-scripts allow-same-origin">
+          <amp-img src="https://cdn-images-1.medium.com/max/2400/1*fXlnuk6UYWDcZqsxwFhQWg.png"
+            layout="fixed-height"
+            height="360"
+            width="auto"
+            placeholder>
+          </amp-img>
+        </amp-iframe>
+        <figcaption>An interactive chart - in AMP!</figcaption>
+      </figure>
+      <h2>amp-iframe: call from other domain, not Google </h2>
+      <figure class="figure">
+          <amp-iframe src="https://myifew.com/"
+            title="from medium"
+            height="360"
+            layout="fixed-height"
+            frameborder="0"
+            sandbox="allow-scripts allow-same-origin">
+            <amp-img src="https://cdn-images-1.medium.com/max/2400/1*fXlnuk6UYWDcZqsxwFhQWg.png"
+              layout="fixed-height"
+              height="360"
+              width="auto"
+              placeholder>
+            </amp-img>
+          </amp-iframe>
+          <figcaption>An interactive chart - in AMP!</figcaption>
+        </figure>
+        <h2>amp-iframe: call Local javascript (Work with use sub domain name) </h2>
+        <p>must use //cdn.localhost:9001/ (exclude http:)</p>    
+        <amp-iframe src="//cdn.localhost:9001/js.html"
+            title="local javascript"
+            height="360"
+            layout="fixed-height"
+            frameborder="0"
+            sandbox="allow-scripts allow-same-origin">
+        </amp-iframe>
+
+        <h2>amp-iframe: call Local javascript (jQuery), change text in this document</h2>
+        <p>must use //cdn.localhost:9001/ (exclude http:)</p>    
+        <amp-iframe src="//cdn.localhost:9001/js_change_parent.html"
+            title="local javascript"
+            height="360"
+            layout="fixed-height"
+            frameborder="0"
+            sandbox="allow-scripts allow-same-origin">
+        </amp-iframe>
+        <div id="jshtml-change-parent">Hello World</div>
+</body>
+
+</html>
